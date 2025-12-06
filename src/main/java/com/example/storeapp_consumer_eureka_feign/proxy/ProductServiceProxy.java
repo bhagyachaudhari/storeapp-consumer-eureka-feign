@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient("product-service")
+@FeignClient(name = "product-service")
 public interface ProductServiceProxy {
 
     @GetMapping(value = "/products/{id}", produces = { MediaType.APPLICATION_JSON_VALUE }, headers = {})
